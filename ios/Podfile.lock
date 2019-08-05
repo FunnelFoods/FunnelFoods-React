@@ -81,6 +81,8 @@ PODS:
   - React-RCTWebSocket (0.60.4):
     - React-Core (= 0.60.4)
     - React-fishhook (= 0.60.4)
+  - ReactNativeNavigation (3.0.0-alpha.10):
+    - React
   - yoga (0.60.4.React)
 
 DEPENDENCIES:
@@ -105,6 +107,7 @@ DEPENDENCIES:
   - React-RCTText (from `../node_modules/react-native/Libraries/Text`)
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - React-RCTWebSocket (from `../node_modules/react-native/Libraries/WebSocket`)
+  - ReactNativeNavigation (from `../node_modules/react-native-navigation`)
   - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -154,6 +157,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/Libraries/Vibration"
   React-RCTWebSocket:
     :path: "../node_modules/react-native/Libraries/WebSocket"
+  ReactNativeNavigation:
+    :path: "../node_modules/react-native-navigation"
   yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -180,6 +185,7 @@ SPEC CHECKSUMS:
   React-RCTText: e0f224898b13af9aa036ea7cb3d438daa68c1044
   React-RCTVibration: 0bea40cd51bd089bd591a8f74c86e91fdf2666c5
   React-RCTWebSocket: 163873f4cdd5f1058a9483443404fc3801581cb6
+  ReactNativeNavigation: 37ce29ce3b6741e2505868c06c14aec06406b5aa
   yoga: c2c050f6ae6e222534760cc82f559b89214b67e2
 
 PODFILE CHECKSUM: 5f3f4186df4554e351b03f73b23ce8e15bf3f522
