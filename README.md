@@ -1,5 +1,4 @@
-# FunnelFoods App - DEV branch
-*Merge any feature level changes here*
+# FunnelFoods App
 
 React codebase for Web, iOS and Android.
 
