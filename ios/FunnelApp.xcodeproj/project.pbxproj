@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* FunnelAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* FunnelAppTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
@@ -18,7 +17,6 @@
 		2DCD954D1E0B4F2C00145EB5 /* FunnelAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* FunnelAppTests.m */; };
 		7305163FAA0C906FA8ED3FFE /* libPods-FunnelAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 850946EF56B18E9E97EB833E /* libPods-FunnelAppTests.a */; };
 		8FFB6558987F71CCA1930F14 /* libPods-FunnelApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B35AD5391128F3C8EC61DE5C /* libPods-FunnelApp-tvOSTests.a */; };
-		A322D18322F8ADCB00C4D62C /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A322D18222F8ADCB00C4D62C /* libReactNativeNavigation.a */; };
 		C20C4ECF746BF8AFA853B615 /* libPods-FunnelApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1D1DA46DB279587A4E4B42 /* libPods-FunnelApp-tvOS.a */; };
 		F63F4A51F694B503BF911A99 /* libPods-FunnelApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 557FB130C3B087BFD0B79A57 /* libPods-FunnelApp.a */; };
 /* End PBXBuildFile section */
@@ -37,20 +35,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "FunnelApp-tvOS";
-		};
-		A322D17E22F8ADBC00C4D62C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A322D17922F8ADBC00C4D62C /* ReactNativeNavigation.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D8AFADBD1BEE6F3F00A4592D;
-			remoteInfo = ReactNativeNavigation;
-		};
-		A322D18022F8ADBC00C4D62C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A322D17922F8ADBC00C4D62C /* ReactNativeNavigation.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7B49FEBB1E95090800DEB3EA;
-			remoteInfo = ReactNativeNavigationTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -76,8 +60,6 @@
 		7D1D1DA46DB279587A4E4B42 /* libPods-FunnelApp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FunnelApp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		850946EF56B18E9E97EB833E /* libPods-FunnelAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FunnelAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E7E887EE5C753200A15C4E8 /* Pods-FunnelApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunnelApp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-FunnelApp-tvOS/Pods-FunnelApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		A322D17922F8ADBC00C4D62C /* ReactNativeNavigation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeNavigation.xcodeproj; path = "../node_modules/react-native-navigation/lib/ios/ReactNativeNavigation.xcodeproj"; sourceTree = "<group>"; };
-		A322D18222F8ADCB00C4D62C /* libReactNativeNavigation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReactNativeNavigation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35AD5391128F3C8EC61DE5C /* libPods-FunnelApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FunnelApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7228653E778D9B630A63DDA /* Pods-FunnelApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunnelApp.release.xcconfig"; path = "Target Support Files/Pods-FunnelApp/Pods-FunnelApp.release.xcconfig"; sourceTree = "<group>"; };
 		CBDE0F4BA7B90061CBAE95A2 /* Pods-FunnelApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunnelApp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-FunnelApp-tvOS/Pods-FunnelApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,7 +81,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A322D18322F8ADCB00C4D62C /* libReactNativeNavigation.a in Frameworks */,
 				F63F4A51F694B503BF911A99 /* libPods-FunnelApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,7 +152,6 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				A322D17922F8ADBC00C4D62C /* ReactNativeNavigation.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -198,15 +178,6 @@
 				00E356EE1AD99517003FC87E /* FunnelAppTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* FunnelApp-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* FunnelApp-tvOSTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		A322D17A22F8ADBC00C4D62C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A322D17F22F8ADBC00C4D62C /* libReactNativeNavigation.a */,
-				A322D18122F8ADBC00C4D62C /* ReactNativeNavigationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -318,10 +289,15 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = J5PAEG9379;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = J5PAEG9379;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = J5PAEG9379;
 						ProvisioningStyle = Automatic;
 					};
 					2D02E48F1E0B4A5D006451C7 = {
@@ -344,10 +320,6 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
-				{
-					ProductGroup = A322D17A22F8ADBC00C4D62C /* Products */;
-					ProjectRef = A322D17922F8ADBC00C4D62C /* ReactNativeNavigation.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -360,20 +332,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		A322D17F22F8ADBC00C4D62C /* libReactNativeNavigation.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libReactNativeNavigation.a;
-			remoteRef = A322D17E22F8ADBC00C4D62C /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A322D18122F8ADBC00C4D62C /* ReactNativeNavigationTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ReactNativeNavigationTests.xctest;
-			remoteRef = A322D18022F8ADBC00C4D62C /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -635,11 +593,14 @@
 			baseConfigurationReference = EE7A250F128AF138E99D4FE2 /* Pods-FunnelAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = J5PAEG9379;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = FunnelAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -660,7 +621,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				HEADER_SEARCH_PATHS = "$(inherited)";
+				DEVELOPMENT_TEAM = J5PAEG9379;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = FunnelAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -682,6 +646,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = J5PAEG9379;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-navigation/lib/ios",
@@ -714,7 +679,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.zehaohuang.FunnelApp;
 				PRODUCT_NAME = FunnelApp;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -726,6 +691,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J5PAEG9379;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-navigation/lib/ios",
@@ -758,7 +724,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.zehaohuang.FunnelApp;
 				PRODUCT_NAME = FunnelApp;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -775,9 +741,12 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = J5PAEG9379;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				HEADER_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "FunnelApp-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -785,7 +754,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.FunnelApp-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.zehaohuang.FunnelApp-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -805,8 +774,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = J5PAEG9379;
 				GCC_NO_COMMON_BLOCKS = YES;
-				HEADER_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "FunnelApp-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -814,7 +786,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.FunnelApp-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.zehaohuang.FunnelApp-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -834,7 +806,9 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				HEADER_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "FunnelApp-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -862,7 +836,9 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				HEADER_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "FunnelApp-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
