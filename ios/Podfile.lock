@@ -81,7 +81,7 @@ PODS:
   - React-RCTWebSocket (0.60.4):
     - React-Core (= 0.60.4)
     - React-fishhook (= 0.60.4)
-  - ReactNativeNavigation (3.0.0-alpha.10):
+  - ReactNativeNavigation (3.2.0):
     - React
   - yoga (0.60.4.React)
 
@@ -185,9 +185,9 @@ SPEC CHECKSUMS:
   React-RCTText: e0f224898b13af9aa036ea7cb3d438daa68c1044
   React-RCTVibration: 0bea40cd51bd089bd591a8f74c86e91fdf2666c5
   React-RCTWebSocket: 163873f4cdd5f1058a9483443404fc3801581cb6
-  ReactNativeNavigation: 37ce29ce3b6741e2505868c06c14aec06406b5aa
+  ReactNativeNavigation: aad255980f20cc5d2001ed37972319f3789fea70
   yoga: c2c050f6ae6e222534760cc82f559b89214b67e2
 
-PODFILE CHECKSUM: fa78e75d171b360cbc2b59fc6429fd6fb4fe6657
+PODFILE CHECKSUM: 89ff633c41340e19b1986da0a0cfd34e4162b275
 
 COCOAPODS: 1.7.5

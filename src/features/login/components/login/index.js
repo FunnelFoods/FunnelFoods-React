@@ -4,6 +4,7 @@ import { styles } from "./styles";
 import { styles as inputStyles } from "../../../../styles/authentication/input";
 import { constants } from "../../constants";
 import { colors } from "../../../../styles/colors"
+import { navigateToSignupPage } from "../../actions";
 
 export default class LoginPage extends Component {
     render() {
@@ -37,7 +38,9 @@ export default class LoginPage extends Component {
                     </View>
                 </View>
                 <View style={ styles.container }>
-                    <Text style={ styles.text }>Don’t have an account? Sign up!</Text>
+                    <Button title={ "Don’t have an account? Sign up!" }
+                            color={ colors.white }
+                            onPress={ navigateToSignupPage } />
                 </View>
             </View>
         );
