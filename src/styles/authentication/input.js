@@ -1,17 +1,16 @@
 import { StyleSheet } from 'react-native';
 
-const styles = StyleSheet.create({
-    field: {
-        textAlign: "left",
-        color: "white",
-        fontSize: 30,
-    },
-    input: {
-        height: 40,
-        borderBottomColor: "white",
-        borderBottomWidth: 2,
-        color: "white"
-    },
+const field = StyleSheet.create({
+    textAlign: "left",
+    color: "white",
+    fontSize: 30
 });
 
-export { styles };
+const input = StyleSheet.create({
+    height: 40,
+    borderBottomColor: "white",
+    borderBottomWidth: 2,
+    color: "white"
+});
+
+export { field, input };
