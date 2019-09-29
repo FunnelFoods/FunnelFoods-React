@@ -20,8 +20,9 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm install
+        npm install -g react-native-cli
         cd ios && pod install && cd ..
-        npm run-ios
+        react-native run ios
         npm test
       env:
         CI: true
