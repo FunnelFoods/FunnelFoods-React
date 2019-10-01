@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
     field: {
         textAlign: "left",
         color: "white",
-        fontSize: 30,
+        fontSize: 25,
         fontFamily: "FilsonSoftMedium"
     },
     input: {
