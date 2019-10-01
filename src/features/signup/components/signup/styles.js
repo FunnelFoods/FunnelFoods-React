@@ -10,6 +10,8 @@ const styles = StyleSheet.create({
     },
     textHeader: {
         color: 'white',
+        fontFamily: 'FilsonSoftMedium',
+        fontSize: 24,
         paddingTop: 58,
 
     },
@@ -19,10 +21,45 @@ const styles = StyleSheet.create({
     },
     fillName: {
         color: 'white',
-        paddingTop: 36,
-        alignSelf:"flex-start",
-        paddingLeft: 57,
+        fontFamily: 'FilsonSoftMedium',
+        fontSize: 16,
+        paddingTop: 50,
+        paddingRight: 220,
         },
+    fillAIA: {
+        color: 'white',
+        fontFamily: 'FilsonSoftMedium',
+        fontSize: 16,
+        paddingTop: 40,
+        paddingRight: 140,
+    },
+    fillEMAIL: {
+        color: 'white',
+        fontFamily: 'FilsonSoftMedium',
+        fontSize: 16,
+        paddingTop: 40,
+        paddingRight: 215,
+    },
+    fillPASSWORD: {
+        color: 'white',
+        fontFamily: 'FilsonSoftMedium',
+        fontSize: 16,
+        paddingTop: 40,
+        paddingRight: 175,
+    },
+    fillCOMFIRMPASSWORD: {
+        color: 'white',
+        fontFamily: 'FilsonSoftMedium',
+        fontSize: 16,
+        paddingTop: 40,
+        paddingRight: 90,
+    },
+    rule:{
+        paddingTop: 48,
+        borderBottomWidth: 2,
+        borderBottomColor: 'white',
+        width: 270,
+    },
     header: {
         marginTop: 150,
         backgroundColor: '#ededed',
