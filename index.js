@@ -8,9 +8,9 @@ import {name as appName} from './app.json';
 import { Navigation } from "react-native-navigation";
 import LoginPage from "./src/features/login/components/login/index"
 import SignupPage from "./src/features/signup/components/signup/index"
-import ItemListPage from "./src/features/items/components/items";
-import CookPage from "./src/features/cook/components/cook";
-import SettingsPage from "./src/features/settings/components/settings"
+import ItemListPage from "./src/features/list/components/list/index";
+import CookPage from "./src/features/cook/components/cook/index";
+import SettingsPage from "./src/features/settings/components/settings/index"
 
 AppRegistry.registerComponent(appName, () => App);
 AppRegistry.registerComponent('loginPage', () => LoginPage);
