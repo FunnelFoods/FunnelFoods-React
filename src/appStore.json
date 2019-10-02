@@ -7,6 +7,9 @@
     "hash/UUID": 19239081,
     "expires": 1235,
     "_expires_comment": "Add this to get a new token from the server with the hash or smth, useful if we want to log everyone out of their accounts for some reason",
+    "linked": {
+      "facebook": "SOME FORM OF ID"
+    },
     "payment": [
       {
         "card_type": "VISA",
@@ -22,9 +25,9 @@
       "amount": 2,
       "unit": "kg",
       "category": "Poultry",
-      "purchase_time": 891238,
+      "purchaseTime": 891238,
       "expiration": 12344551,
-      "_comment": "##### purchase_time and expiration should be in a universal time, like seconds after epoch"
+      "_comment": "##### purchaseTime and expiration should be in a universal time, like seconds after epoch"
     },
     {
       "name": "Beefsteak",
@@ -32,9 +35,9 @@
       "amount": 3,
       "unit": "items",
       "category": "Meat",
-      "purchase_time": 90123,
+      "purchaseTime": 90123,
       "expiration": 123551,
-      "_comment": "##### purchase_time and expiration should be in a universal time, like seconds after epoch"
+      "_comment": "##### purchaseTime and expiration should be in a universal time, like seconds after epoch"
     }
   ],
   "recipes": [123,1234,12355],
@@ -76,7 +79,7 @@
   "shopping_list": [
     {
       "UUID": 12738,
-      "quantity": 2,
+      "quantity": 2
     },
     {
       "UUID": 1271,
