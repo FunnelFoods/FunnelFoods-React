@@ -11,8 +11,8 @@ const styles = StyleSheet.create({
         color: "black"
     },
     logo: {
-        width: 500,
-        height: 225
+        width: 400,
+        height: 200
     },
     container: {
         alignSelf: "stretch",

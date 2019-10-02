@@ -4,7 +4,7 @@ import { styles } from "./styles";
 import { styles as inputStyles } from "../../../../styles/authentication/input";
 import { constants } from "../../constants";
 import { colors } from "../../../../styles/colors"
-import { navigateToSignupPage } from "../../actions";
+import { navigateToSignupPage, navigateToMainApp } from "../../../../navigation/actions/index";
 
 export default class LoginPage extends Component {
     render() {
@@ -33,7 +33,7 @@ export default class LoginPage extends Component {
                         { /* TODO: Implement button behavior */ }
                         <Button title="sign in"
                                 color={ colors.primaryLight }
-                                onPress={() => Alert.alert('Simple Button pressed')}
+                                onPress={ navigateToMainApp }
                         />
                     </View>
                 </View>
