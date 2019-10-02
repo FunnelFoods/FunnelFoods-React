@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import { Text, View, Button } from 'react-native';
-import {navigateToLoginPage} from "../../actions";
+import { navigateToLoginPage } from "../../../../navigation/actions/index";
 
 export default class SignupPage extends Component {
     render() {
