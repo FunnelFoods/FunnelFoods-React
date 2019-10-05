@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { colors } from '../../../../styles/colors';
 
 const styles = StyleSheet.create({
     background: {
@@ -7,6 +8,18 @@ const styles = StyleSheet.create({
         alignItems: "center",
         // paddingTop: 58,
 
+    },
+    container: {
+        marginTop:50,
+        alignSelf: "stretch",
+        marginHorizontal: 45,
+        marginVertical: 20
+    },
+    lastContainer: {
+        marginTop:5,
+        alignSelf: "stretch",
+        marginHorizontal: 45,
+        marginVertical: 20
     },
     textHeader: {
         color: 'white',
@@ -30,33 +43,88 @@ const styles = StyleSheet.create({
         color: 'white',
         fontFamily: 'FilsonSoftMedium',
         fontSize: 16,
-        paddingTop: 40,
+        paddingTop: 30,
         paddingRight: 140,
     },
     fillEMAIL: {
         color: 'white',
         fontFamily: 'FilsonSoftMedium',
         fontSize: 16,
-        paddingTop: 40,
+        paddingTop: 30,
         paddingRight: 215,
     },
     fillPASSWORD: {
         color: 'white',
         fontFamily: 'FilsonSoftMedium',
         fontSize: 16,
-        paddingTop: 40,
+        paddingTop: 30,
         paddingRight: 175,
     },
     fillCOMFIRMPASSWORD: {
         color: 'white',
         fontFamily: 'FilsonSoftMedium',
         fontSize: 16,
-        paddingTop: 40,
+        paddingTop: 30,
         paddingRight: 90,
     },
+    customBtnBG: {
+        alignSelf: "stretch",
+        borderRadius: 4,
+        height: 48,
+        backgroundColor: '#FFFFFF99',
+        shadowColor: "#EB6B45A3",
+        shadowOpacity: 0.8,
+        shadowRadius: 2,
+        shadowOffset: {
+            height: 1,
+            width: 1
+        },
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    buttonContainer: {
+        alignSelf: "stretch",
+        borderRadius: 4,
+        height: 48,
+        backgroundColor: '#FFFFFF99',
+        shadowColor: "#EB6B45A3",
+        shadowOpacity: 0.8,
+        shadowRadius: 2,
+        shadowOffset: {
+            height: 1,
+            width: 1
+        },
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    customBtnText: {
+        paddingTop:2.5,
+        textAlign: 'center',
+        fontFamily: 'FilsonSoftMedium',
+        fontSize: 24,
+        // fontWeight: '400',
+        color: "#FF7F5A",
+
+    },
+    customBtnTextN: {
+
+        textAlign: 'center',
+        fontFamily: 'Muli-Regular',
+        fontSize: 16,
+        // fontWeight: '400',
+        color: "#FFFFFF",
+        textDecorationLine: 'underline',
+
+    },
+    text: {
+        alignSelf: "center",
+        textDecorationLine: "underline",
+        color: colors.white,
+    },
+
     rule:{
-        paddingTop: 48,
-        borderBottomWidth: 2,
+        paddingTop: 15,
+        borderBottomWidth: 0.5,
         borderBottomColor: 'white',
         width: 270,
     },
