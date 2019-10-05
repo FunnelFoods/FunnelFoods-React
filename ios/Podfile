@@ -1,8 +1,8 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'FunnelApp' do
-  # Pods for FunnelApp
+target 'FunnelFoods' do
+  # Pods for FunnelFoods
   pod 'React', :path => '../node_modules/react-native/'
   pod 'React-Core', :path => '../node_modules/react-native/React'
   pod 'React-DevSupport', :path => '../node_modules/react-native/React'
@@ -28,9 +28,8 @@ target 'FunnelApp' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  pod 'ReactNativeNavigation', :path => '../node_modules/react-native-navigation'
 
-  target 'FunnelAppTests' do
+  target 'FunnelFoodsTests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -38,10 +37,10 @@ target 'FunnelApp' do
   use_native_modules!
 end
 
-target 'FunnelApp-tvOS' do
-  # Pods for FunnelApp-tvOS
+target 'FunnelFoods-tvOS' do
+  # Pods for FunnelFoods-tvOS
 
-  target 'FunnelApp-tvOSTests' do
+  target 'FunnelFoods-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
