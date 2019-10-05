@@ -20,6 +20,7 @@
   },
   "ingredients": [
     {
+      "UUID": 123124,
       "name": "Pork",
       "price": 23.8,
       "amount": 2,
@@ -30,6 +31,7 @@
       "_comment": "##### purchaseTime and expiration should be in a universal time, like seconds after epoch"
     },
     {
+      "UUID": 123511,
       "name": "Beefsteak",
       "price": 18.1,
       "amount": 3,
