@@ -33,7 +33,7 @@ Navigation.events().registerAppLaunchedListener(() => {
     Navigation.setRoot({
         root: {
             component: {
-                name: "loginPage"
+                name: "itemListPage"
             }
         }
     });
