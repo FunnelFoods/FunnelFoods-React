@@ -83,6 +83,10 @@ PODS:
     - React-fishhook (= 0.60.4)
   - ReactNativeNavigation (3.2.0):
     - React
+  - RNSearchBar (3.5.0):
+    - React
+  - RNVectorIcons (6.6.0):
+    - React
   - yoga (0.60.4.React)
 
 DEPENDENCIES:
@@ -108,6 +112,8 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - React-RCTWebSocket (from `../node_modules/react-native/Libraries/WebSocket`)
   - ReactNativeNavigation (from `../node_modules/react-native-navigation`)
+  - RNSearchBar (from `../node_modules/react-native-search-bar`)
+  - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -159,6 +165,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/Libraries/WebSocket"
   ReactNativeNavigation:
     :path: "../node_modules/react-native-navigation"
+  RNSearchBar:
+    :path: "../node_modules/react-native-search-bar"
+  RNVectorIcons:
+    :path: "../node_modules/react-native-vector-icons"
   yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -186,8 +196,10 @@ SPEC CHECKSUMS:
   React-RCTVibration: 0bea40cd51bd089bd591a8f74c86e91fdf2666c5
   React-RCTWebSocket: 163873f4cdd5f1058a9483443404fc3801581cb6
   ReactNativeNavigation: aad255980f20cc5d2001ed37972319f3789fea70
+  RNSearchBar: f6bb44cf1b0974bc01ae9a27417d3008108a6c92
+  RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   yoga: c2c050f6ae6e222534760cc82f559b89214b67e2
 
-PODFILE CHECKSUM: b41d4b422e8f708733e00c60e33d87d0658eafb7
+PODFILE CHECKSUM: dce8bdf27291830d810b3e36106df8bfe1f99666
 
 COCOAPODS: 1.8.3

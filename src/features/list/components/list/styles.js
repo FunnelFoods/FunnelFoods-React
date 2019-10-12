@@ -22,9 +22,15 @@ const styles = StyleSheet.create({
     },
 
     searchBar: {
-        flexDirection: 'row',
+        flex: 3,
         alignItems: 'center',
     },
+
+    containerBar:{
+        flexDirection: 'row',
+    },
+
+
 
     text1: {
         color: '#05436F',
@@ -43,9 +49,77 @@ const styles = StyleSheet.create({
         paddingTop: 10.5,
     },
 
+    container2:{
+        alignItems:'center',
+    },
+
+    dishName:{
+        color: '#05436F',
+        fontFamily: 'Muli-Bold',
+        fontSize:20,
+        marginLeft:9,
+        marginTop:3,
+    },
+
+    underline: {textDecorationLine: 'underline'},
+
+    dishType:{
+        color: '#05436F',
+        fontFamily: 'Muli-Regular',
+        fontSize:12,
+        marginLeft:9,
+        marginTop:2,
+    },
+
+    inventory:{
+        color: '#05436F',
+        fontFamily: 'Muli-Regular',
+        fontSize:10,
+        marginLeft:9,
+        marginTop:5,
+    },
+
+    price: {
+        color: '#05436F',
+        fontFamily: 'Muli-ExtraBold',
+        fontSize:20,
+        marginLeft:230,
+        marginTop:-60,
+    },
+
+    expiration:{
+        color: '#E61259',
+        fontFamily: 'Muli-Regular',
+        fontSize:12,
+        marginLeft:200,
+        marginTop:1.5,
+    },
+
+    purchaseDate:{
+        color: '#05436F',
+        fontFamily: 'Muli-Regular',
+        fontSize:10,
+        marginLeft:223.5,
+        marginTop:4,
+
+    },
+
+    itemContainer: {
+        width: 311,
+        height: 70,
+        borderRadius: 8,
+        backgroundColor: colors.white,
+        shadowColor:'#AAAAAA55',
+        shadowOffset:{width:2, height:2},
+        marginTop:10,
+        marginBottom:5,
+        
+    },
+
     searchButton:{
+        flex:1,
         paddingLeft: '55%',
-        paddingTop: 10.5,
+        paddingTop: 15.5,
     }
 });
 

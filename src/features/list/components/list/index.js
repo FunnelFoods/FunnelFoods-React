@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Text, TextInput, View, Button, Alert, TouchableOpacity} from 'react-native';
+import {Text, TextInput, View, Button, Alert, TouchableOpacity, ScrollView} from 'react-native';
 import { styles } from "./styles";
 import Icon from 'react-native-vector-icons/Ionicons';
 import { styles as inputStyles } from "../../../../styles/authentication/input"
@@ -27,15 +27,150 @@ export default class ItemListPage extends Component {
                 </View>
 
                 {/* Search Bar */}
+                <View style = {styles.containerBar}>
                 <View style={styles.searchBar}>
-                    <TextInput placeholder="Search    "
+                    <TextInput placeholder="Search                        "
                                placeholderTextColor='rgba(5, 67, 111, 0.8)'
                                style={{fontFamily: 'Muli-Regular', fontSize: 14, paddingHorizontal: 32, paddingTop: 14.5}}
                     />
-                    <View style={styles.searchButton}>
-                        <Icon name ='ios-search' size={14} color='rgba(5, 67, 111, 1)'/>
-                    </View>
                 </View>
+                <View style={styles.searchButton}>
+                <TouchableOpacity
+                            onPress={() => Alert.alert('Pushed Search Icon!')}
+                        >
+                        <Icon name ='ios-search' size={14} color='rgba(5, 67, 111, 1)'/>
+                </TouchableOpacity>
+                </View>
+                </View>
+            <ScrollView>
+                <View style = {styles.container2}>
+                    <View style = {styles.itemContainer}>
+                        <Text style={styles.dishName}>
+                            Broccoli
+                        </Text>
+                        <Text style={styles.dishType}>
+                            vegetable
+                        </Text>
+                        <Text style={styles.inventory}>
+                            <Text style={styles.underline}>
+                                5 bundles 
+                            </Text> in stock
+                        </Text>
+                        <Text style = {styles.price}>
+                        $ 15.00
+                        </Text>
+                        <Text style = {styles.expiration}>Expire on 6th June</Text>
+                        <Text style={styles.purchaseDate}>bought 2nd June</Text>
+                     </View>
+                </View>
+
+                <View style = {styles.container2}>
+                    <View style = {styles.itemContainer}>
+                        <Text style={styles.dishName}>
+                            Broccoli
+                        </Text>
+                        <Text style={styles.dishType}>
+                            vegetable
+                        </Text>
+                        <Text style={styles.inventory}>
+                            <Text style={styles.underline}>
+                                5 bundles 
+                            </Text> in stock
+                        </Text>
+                        <Text style = {styles.price}>
+                        $ 15.00
+                        </Text>
+                        <Text style = {styles.expiration}>Expire on 6th June</Text>
+                        <Text style={styles.purchaseDate}>bought 2nd June</Text>
+                     </View>
+                </View>
+
+                <View style = {styles.container2}>
+                    <View style = {styles.itemContainer}>
+                        <Text style={styles.dishName}>
+                            Broccoli
+                        </Text>
+                        <Text style={styles.dishType}>
+                            vegetable
+                        </Text>
+                        <Text style={styles.inventory}>
+                            <Text style={styles.underline}>
+                                5 bundles 
+                            </Text> in stock
+                        </Text>
+                        <Text style = {styles.price}>
+                        $ 15.00
+                        </Text>
+                        <Text style = {styles.expiration}>Expire on 6th June</Text>
+                        <Text style={styles.purchaseDate}>bought 2nd June</Text>
+                     </View>
+                </View>
+
+                <View style = {styles.container2}>
+                    <View style = {styles.itemContainer}>
+                        <Text style={styles.dishName}>
+                            Broccoli
+                        </Text>
+                        <Text style={styles.dishType}>
+                            vegetable
+                        </Text>
+                        <Text style={styles.inventory}>
+                            <Text style={styles.underline}>
+                                5 bundles 
+                            </Text> in stock
+                        </Text>
+                        <Text style = {styles.price}>
+                        $ 15.00
+                        </Text>
+                        <Text style = {styles.expiration}>Expire on 6th June</Text>
+                        <Text style={styles.purchaseDate}>bought 2nd June</Text>
+                     </View>
+                </View>
+
+                <View style = {styles.container2}>
+                    <View style = {styles.itemContainer}>
+                        <Text style={styles.dishName}>
+                            Broccoli
+                        </Text>
+                        <Text style={styles.dishType}>
+                            vegetable
+                        </Text>
+                        <Text style={styles.inventory}>
+                            <Text style={styles.underline}>
+                                5 bundles 
+                            </Text> in stock
+                        </Text>
+                        <Text style = {styles.price}>
+                        $ 15.00
+                        </Text>
+                        <Text style = {styles.expiration}>Expire on 6th June</Text>
+                        <Text style={styles.purchaseDate}>bought 2nd June</Text>
+                     </View>
+                </View>
+
+                <View style = {styles.container2}>
+                    <View style = {styles.itemContainer}>
+                        <Text style={styles.dishName}>
+                            Broccoli
+                        </Text>
+                        <Text style={styles.dishType}>
+                            vegetable
+                        </Text>
+                        <Text style={styles.inventory}>
+                            <Text style={styles.underline}>
+                                5 bundles 
+                            </Text> in stock
+                        </Text>
+                        <Text style = {styles.price}>
+                        $ 15.00
+                        </Text>
+                        <Text style = {styles.expiration}>Expire on 6th June</Text>
+                        <Text style={styles.purchaseDate}>bought 2nd June</Text>
+                     </View>
+                </View>
+                </ScrollView>
+
+                
 
 
             </View>
@@ -43,3 +178,4 @@ export default class ItemListPage extends Component {
         );
     }
 }
+
