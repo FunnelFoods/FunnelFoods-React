@@ -169,10 +169,6 @@ export default class ItemListPage extends Component {
                      </View>
                 </View>
                 </ScrollView>
-
-                
-
-
             </View>
 
         );
