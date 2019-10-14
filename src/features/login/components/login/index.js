@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { LoginButton, AccessToken } from 'react-native-fbsdk';
 import { Text, TextInput, View, Image, Button, Alert } from 'react-native';
 import { styles } from "./styles";
 import { styles as inputStyles } from "../../../../styles/authentication/input";
@@ -36,6 +37,25 @@ export default class LoginPage extends Component {
                                 onPress={ navigateToMainApp }
                         />
                     </View>
+                </View>
+                <View stule = { styles.container }>
+                    <LoginButton
+                        onLoginFinished={
+                            (error, result) => {
+                                if (error) {
+                                    console.log("login has error: " + result.error);
+                                } else if (result.isCancelled) {
+                                    console.log("login is cancelled.");
+                                } else {
+                                    AccessToken.getCurrentAccessToken().then(
+                                        (data) => {
+                                            console.log(data.accessToken.toString())
+                                        }
+                                    )
+                                }
+                            }
+                        }
+                        onLogoutFinished={() => console.log("logout.")}/>
                 </View>
                 <View style={ styles.container }>
                     <Button title={ "Don’t have an account? Sign up!" }
