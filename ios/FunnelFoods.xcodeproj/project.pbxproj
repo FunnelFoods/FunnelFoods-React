@@ -11,6 +11,7 @@
 		0A79BA7E8F3B42EBB1AEB4BD /* Muli-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36EF48E7724F4A54BCC0A057 /* Muli-ExtraBoldItalic.ttf */; };
 		0ABF64E7B7F742F4B2899795 /* Muli-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF07FDC254424A86A57846BF /* Muli-Regular.ttf */; };
 		0C9542FCF2204ACE9B0062F7 /* FilsonSoftRegular-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7171B76A90A846AE9B3F2848 /* FilsonSoftRegular-Italic.otf */; };
+		101F4E4F235455E100FA3C8F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 101F4E4E235455E100FA3C8F /* GoogleService-Info.plist */; };
 		1318EC9232564C648758BAF2 /* Muli-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F99CF9B5D8441C0B7BA926F /* Muli-Italic.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
@@ -63,6 +64,8 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* FunnelFoodsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunnelFoodsTests.m; sourceTree = "<group>"; };
 		0FF8F5C975CE42B88926CCF1 /* Muli-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Muli-Bold.ttf"; path = "../src/assets/fonts/Muli-Bold.ttf"; sourceTree = "<group>"; };
+		101F4E4C235451AC00FA3C8F /* libRNGoogleSignin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNGoogleSignin.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		101F4E4E235455E100FA3C8F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* FunnelFoods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunnelFoods.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = FunnelFoods/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = FunnelFoods/AppDelegate.m; sourceTree = "<group>"; };
@@ -186,6 +189,7 @@
 		13B07FAE1A68108700A75B9A /* FunnelFoods */ = {
 			isa = PBXGroup;
 			children = (
+				101F4E4E235455E100FA3C8F /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -200,6 +204,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				101F4E4C235451AC00FA3C8F /* libRNGoogleSignin.a */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				557FB130C3B087BFD0B79A57 /* libPods-FunnelFoods.a */,
@@ -423,6 +428,7 @@
 				0ABF64E7B7F742F4B2899795 /* Muli-Regular.ttf in Resources */,
 				18C524A651CE4D0EB6127D62 /* Muli-SemiBold.ttf in Resources */,
 				95EA2FE45658426D8BEB25E8 /* Muli-SemiBoldItalic.ttf in Resources */,
+				101F4E4F235455E100FA3C8F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,10 +574,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FunnelFoods/Pods-FunnelFoods-resources.sh",
 				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -768,7 +776,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.zehaohuang.FunnelFoods;
+				PRODUCT_BUNDLE_IDENTIFIER = com.funnel.funnel;
 				PRODUCT_NAME = FunnelFoods;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -813,7 +821,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.zehaohuang.FunnelFoods;
+				PRODUCT_BUNDLE_IDENTIFIER = com.funnel.funnel;
 				PRODUCT_NAME = FunnelFoods;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

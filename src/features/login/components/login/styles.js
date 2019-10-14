@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     container: {
         alignSelf: "stretch",
         marginHorizontal: 40,
-        marginVertical: 20
+        marginVertical: 20,
     },
     buttonContainer: {
         alignSelf: "stretch",
@@ -26,6 +26,24 @@ const styles = StyleSheet.create({
         backgroundColor: colors.white,
         alignItems: 'center',
         justifyContent: 'center',
+        marginBottom: -30,
+    },
+    facebookButtonContainer: {
+        height: 48,
+        alignSelf: "stretch",
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: -30,
+    },
+    googleButtonContainer: {
+        height: 53,
+        marginTop: -3,
+        marginLeft: "-1%",
+        width: "102%",
+        alignSelf: "stretch",
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: "center"
     },
     text: {
         alignSelf: "center",

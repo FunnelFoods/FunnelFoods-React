@@ -7,6 +7,8 @@
 
 #import "AppDelegate.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <RNGoogleSignin/RNGoogleSignin.h>
+
 
 //#import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
@@ -39,18 +41,20 @@
 
   return YES;
 }
-
-- (BOOL)application:(UIApplication *)application
+// URL handling for Facebook and Google login
+- (BOOL)application:(UIApplication *)app
             openURL:(NSURL *)url
-            options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+            options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
+{
+  if ([[FBSDKApplicationDelegate sharedInstance] application:app openURL:url options:options]) {
+    return YES;
+  }
+  
+  if ([RNGoogleSignin application:app openURL:url options:options]) {
+    return YES;
+  }
 
-  BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
-    openURL:url
-    sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
-    annotation:options[UIApplicationOpenURLOptionsAnnotationKey]
-  ];
-  // Add any custom logic here.
-  return handled;
+  return NO;
 }
 
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge

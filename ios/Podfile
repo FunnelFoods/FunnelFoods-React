@@ -28,6 +28,8 @@ target 'FunnelFoods' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  pod 'GoogleSignIn', '~> 5.0.0'
+
 
   target 'FunnelFoodsTests' do
     inherit! :search_paths
