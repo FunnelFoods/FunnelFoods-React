@@ -1,0 +1,95 @@
+{
+  "logged_in": true,
+  "_logged_in_comment": "######if logged_in is false the user dict is empty",
+  "user": {
+    "first": "John",
+    "last": "Steinbeck",
+    "hash/UUID": 19239081,
+    "expires": 1235,
+    "_expires_comment": "Add this to get a new token from the server with the hash or smth, useful if we want to log everyone out of their accounts for some reason",
+    "linked": {
+      "facebook": "SOME FORM OF ID"
+    },
+    "payment": [
+      {
+        "card_type": "VISA",
+        "number_hash": 12313,
+        "_number_hash_comment": "###USE INDUSTRY STANDARD FOR CARD PROTECTION"
+      }
+    ]
+  },
+  "ingredients": [
+    {
+      "UUID": 123124,
+      "name": "Pork",
+      "price": 23.8,
+      "amount": 2,
+      "unit": "kg",
+      "category": "Poultry",
+      "purchaseTime": 891238,
+      "expiration": 12344551,
+      "_comment": "##### purchaseTime and expiration should be in a universal time, like seconds after epoch"
+    },
+    {
+      "UUID": 123511,
+      "name": "Beefsteak",
+      "price": 18.1,
+      "amount": 3,
+      "unit": "items",
+      "category": "Meat",
+      "purchaseTime": 90123,
+      "expiration": 123551,
+      "_comment": "##### purchaseTime and expiration should be in a universal time, like seconds after epoch"
+    }
+  ],
+  "recipes": [123,1234,12355],
+  "_recipes_comment": "recipes to be displayed on the recipes page, generally the first couple should be in cached_recipes, and pull the rest from server (instagram-like)",
+  "saved_recipes": [1238, 1283781, 18923, 1283],
+  "_saved_recipes_comment": "recipe UUIDs that are saved, they MUST be in cached recipes",
+  "cached_recipes": [
+    {
+      "UUID": 1238,
+      "name": "Braised beefsteak",
+      "ingredients": [
+        {
+          "name": "Beefsteak",
+          "amount": 3,
+          "unit": "items",
+          "category": "Meat"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Turn oven BLUH",
+          "style": "normal",
+          "_style_comment": "style exists such that if you want highlight/blockquote a specific thing you can, otherwise they default to normal"
+        },
+        {
+          "text": "Strip steak of fat",
+          "style": "highlight"
+        }
+      ],
+      "banner": "### SOME BASE64 OF THE IMAGE",
+      "timer": {
+        "hours": 1,
+        "minutes": 23,
+        "seconds": 34
+      },
+      "_timer_comment": "### Each recipe has it's own timer for cooking, it can be empty as well"
+    }
+  ],
+  "shopping_list": [
+    {
+      "UUID": 12738,
+      "quantity": 2
+    },
+    {
+      "UUID": 1271,
+      "quantity": 3
+    }
+  ],
+  "settings": {
+    "notifications": true,
+    "_settings_comments": "###TODO"
+  }
+}
