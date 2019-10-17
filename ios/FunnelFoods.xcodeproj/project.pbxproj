@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* FunnelFoodsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* FunnelFoodsTests.m */; };
 		0A79BA7E8F3B42EBB1AEB4BD /* Muli-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36EF48E7724F4A54BCC0A057 /* Muli-ExtraBoldItalic.ttf */; };

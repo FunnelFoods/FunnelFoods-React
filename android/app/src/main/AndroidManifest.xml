@@ -21,6 +21,10 @@
         </intent-filter>
       </activity>
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+      <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+      <provider android:authorities="com.facebook.app.FacebookContentProvider308813606435793"
+          android:name="com.facebook.FacebookContentProvider"
+          android:exported="true" />
     </application>
 
 </manifest>

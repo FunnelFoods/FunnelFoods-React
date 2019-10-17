@@ -17,6 +17,7 @@ import com.reactnativenavigation.react.NavigationReactNativeHost;
 import com.reactnativenavigation.react.ReactGateway;
 
 import java.util.List;
+import java.util.Arrays;
 
 public class MainApplication extends NavigationApplication {
   @Override
@@ -29,12 +30,12 @@ public class MainApplication extends NavigationApplication {
       };
       return new ReactGateway(this, isDebug(), host);
   }
-  +
+  
   @Override
   public boolean isDebug() {
       return BuildConfig.DEBUG;
   }
-  +
+  
   protected List<ReactPackage> getPackages() {
       // Add additional packages you require here
       // No need to add RnnPackage and MainReactPackage
@@ -42,7 +43,7 @@ public class MainApplication extends NavigationApplication {
           // eg. new VectorIconsPackage()
       );
   }
-  +
+  
   @Override
   public List<ReactPackage> createAdditionalReactPackages() {
       return getPackages();
