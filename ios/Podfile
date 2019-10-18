@@ -31,6 +31,8 @@ target 'FunnelFoods' do
   pod 'GoogleSignIn', '~> 5.0.0'
 
 
+  pod 'react-native-fbsdk', :path => '../node_modules/react-native-fbsdk'
+
   target 'FunnelFoodsTests' do
     inherit! :search_paths
     # Pods for testing
