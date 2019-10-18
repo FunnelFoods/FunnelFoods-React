@@ -189,12 +189,12 @@ android {
 }
 
 dependencies {
-    implementation project(':react-native-fbsdk')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
     implementation project(':react-native-navigation')
     implementation "com.android.support:appcompat-v7:23.0.1"
     implementation(project(":react-native-google-signin"))
+    implementation project(':react-native-fbsdk')
 
     if (enableHermes) {
       def hermesPath = "../../node_modules/hermesvm/android/";

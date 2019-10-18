@@ -7,7 +7,6 @@ import com.facebook.react.PackageList;
 import com.facebook.hermes.reactexecutor.HermesExecutorFactory;
 import com.facebook.react.bridge.JavaScriptExecutorFactory;
 import com.facebook.react.ReactApplication;
-import com.facebook.reactnative.androidsdk.FBSDKPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
@@ -19,6 +18,9 @@ import com.reactnativenavigation.react.ReactGateway;
 
 // Google signin
 import co.apptailor.googlesignin.RNGoogleSigninPackage;
+
+// Facebook signin
+import com.facebook.reactnative.androidsdk.FBSDKPackage;
 
 import java.util.List;
 import java.util.Arrays;
@@ -34,20 +36,21 @@ public class MainApplication extends NavigationApplication {
       };
       return new ReactGateway(this, isDebug(), host);
   }
-  
+
   @Override
   public boolean isDebug() {
       return BuildConfig.DEBUG;
   }
-  
+
   protected List<ReactPackage> getPackages() {
       // Add additional packages you require here
       // No need to add RnnPackage and MainReactPackage
       return Arrays.<ReactPackage>asList(
-          new RNGoogleSigninPackage()
+          new RNGoogleSigninPackage(),
+          new FBSDKPackage()
       );
   }
-  
+
   @Override
   public List<ReactPackage> createAdditionalReactPackages() {
       return getPackages();
