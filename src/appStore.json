@@ -1,4 +1,5 @@
 {
+  "name": "testing",
   "logged_in": true,
   "_logged_in_comment": "######if logged_in is false the user dict is empty",
   "user": {

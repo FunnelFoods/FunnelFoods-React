@@ -1,13 +1,35 @@
 import React, { Component } from 'react';
-import {Text, TextInput, View, Button, Alert, TouchableOpacity, ScrollView} from 'react-native';
+import {Text, TextInput, View, FlatList, Alert, TouchableOpacity, ScrollView} from 'react-native';
 import { styles } from "./styles";
 import Icon from 'react-native-vector-icons/Ionicons';
-import { styles as inputStyles } from "../../../../styles/authentication/input"
-import {constants} from "../../constants"
-import { colors } from '../../../../styles/colors';
-import {navigateToSignupPage} from "../../../login/actions";
+import ItemList from "../item";
 
 export default class ItemListPage extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            dishIngredients: [],
+            dishName: '',
+            dishType: '',
+            dishInventory: '',
+            dishPrice: '',
+            dishExpire: '',
+            dishBuyDate: '',
+        };
+    }
+
+    componentWillMount() {
+        fetch('https://raw.githubusercontent.com/FunnelFoods/FunnelFoods-React/master/src/appStore.json')
+            .then((res) => res.json())
+            .then((data) => {
+                this.setState({
+                    dishIngredients: data.ingredients,
+                    // dishName: data.ingredients[0].name,
+                    // dishType: data.ingredients[0].category
+                });
+            });
+    }
+
     render() {
         return (
             <View style={styles.background}>
@@ -43,132 +65,19 @@ export default class ItemListPage extends Component {
                 </View>
                 </View>
             <ScrollView>
-                <View style = {styles.container2}>
-                    <View style = {styles.itemContainer}>
-                        <Text style={styles.dishName}>
-                            Broccoli
-                        </Text>
-                        <Text style={styles.dishType}>
-                            vegetable
-                        </Text>
-                        <Text style={styles.inventory}>
-                            <Text style={styles.underline}>
-                                5 bundles 
-                            </Text> in stock
-                        </Text>
-                        <Text style = {styles.price}>
-                        $ 15.00
-                        </Text>
-                        <Text style = {styles.expiration}>Expire on 6th June</Text>
-                        <Text style={styles.purchaseDate}>bought 2nd June</Text>
-                     </View>
-                </View>
+                    <FlatList
+                        data = {this.state.dishIngredients}
+                        renderItem={({ item }) => <ItemList
+                            dishName = {item.name}
+                            dishType= {item.category}
+                            dishInventory="5"
+                            dishPrice = {item.price}
+                            dishExpire = "6th June"
+                            dishBuyDate="6th June"
+                        />}
+                    />
+            </ScrollView>
 
-                <View style = {styles.container2}>
-                    <View style = {styles.itemContainer}>
-                        <Text style={styles.dishName}>
-                            Broccoli
-                        </Text>
-                        <Text style={styles.dishType}>
-                            vegetable
-                        </Text>
-                        <Text style={styles.inventory}>
-                            <Text style={styles.underline}>
-                                5 bundles 
-                            </Text> in stock
-                        </Text>
-                        <Text style = {styles.price}>
-                        $ 15.00
-                        </Text>
-                        <Text style = {styles.expiration}>Expire on 6th June</Text>
-                        <Text style={styles.purchaseDate}>bought 2nd June</Text>
-                     </View>
-                </View>
-
-                <View style = {styles.container2}>
-                    <View style = {styles.itemContainer}>
-                        <Text style={styles.dishName}>
-                            Broccoli
-                        </Text>
-                        <Text style={styles.dishType}>
-                            vegetable
-                        </Text>
-                        <Text style={styles.inventory}>
-                            <Text style={styles.underline}>
-                                5 bundles 
-                            </Text> in stock
-                        </Text>
-                        <Text style = {styles.price}>
-                        $ 15.00
-                        </Text>
-                        <Text style = {styles.expiration}>Expire on 6th June</Text>
-                        <Text style={styles.purchaseDate}>bought 2nd June</Text>
-                     </View>
-                </View>
-
-                <View style = {styles.container2}>
-                    <View style = {styles.itemContainer}>
-                        <Text style={styles.dishName}>
-                            Broccoli
-                        </Text>
-                        <Text style={styles.dishType}>
-                            vegetable
-                        </Text>
-                        <Text style={styles.inventory}>
-                            <Text style={styles.underline}>
-                                5 bundles 
-                            </Text> in stock
-                        </Text>
-                        <Text style = {styles.price}>
-                        $ 15.00
-                        </Text>
-                        <Text style = {styles.expiration}>Expire on 6th June</Text>
-                        <Text style={styles.purchaseDate}>bought 2nd June</Text>
-                     </View>
-                </View>
-
-                <View style = {styles.container2}>
-                    <View style = {styles.itemContainer}>
-                        <Text style={styles.dishName}>
-                            Broccoli
-                        </Text>
-                        <Text style={styles.dishType}>
-                            vegetable
-                        </Text>
-                        <Text style={styles.inventory}>
-                            <Text style={styles.underline}>
-                                5 bundles 
-                            </Text> in stock
-                        </Text>
-                        <Text style = {styles.price}>
-                        $ 15.00
-                        </Text>
-                        <Text style = {styles.expiration}>Expire on 6th June</Text>
-                        <Text style={styles.purchaseDate}>bought 2nd June</Text>
-                     </View>
-                </View>
-
-                <View style = {styles.container2}>
-                    <View style = {styles.itemContainer}>
-                        <Text style={styles.dishName}>
-                            Broccoli
-                        </Text>
-                        <Text style={styles.dishType}>
-                            vegetable
-                        </Text>
-                        <Text style={styles.inventory}>
-                            <Text style={styles.underline}>
-                                5 bundles 
-                            </Text> in stock
-                        </Text>
-                        <Text style = {styles.price}>
-                        $ 15.00
-                        </Text>
-                        <Text style = {styles.expiration}>Expire on 6th June</Text>
-                        <Text style={styles.purchaseDate}>bought 2nd June</Text>
-                     </View>
-                </View>
-                </ScrollView>
             </View>
 
         );
