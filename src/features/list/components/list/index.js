@@ -3,10 +3,10 @@ import {Text, TextInput, View, FlatList, Alert, TouchableOpacity, ScrollView} fr
 import { styles } from "./styles";
 import Icon from 'react-native-vector-icons/Ionicons';
 import ItemList from "../item";
-import { styles as inputStyles } from "../../../../styles/authentication/input"
-import {constants} from "../../constants"
-import { colors } from '../../../../styles/colors';
 import { navigateToScanner } from "../../../../navigation/actions";
+import Moment from 'react-moment';
+import 'moment-timezone';
+import moment from "moment";
 
 export default class ItemListPage extends Component {
     constructor(props) {
@@ -23,6 +23,13 @@ export default class ItemListPage extends Component {
                 this.setState({dishIngredients: data.ingredients}, function () {
                     console.log(this.state.dishIngredients);
                 });
+                let stateCopy = JSON.parse(JSON.stringify(this.state.dishIngredients));
+                for (let i = 0; i<stateCopy.length; i++) {
+                    stateCopy[i].purchaseTime = moment(new Date(stateCopy[i].purchaseTime * 1000)).format('MM/DD/YYYY');
+                }
+                    this.setState({
+                        dishIngredients:stateCopy
+                    })
             });
     }
 
@@ -62,16 +69,18 @@ export default class ItemListPage extends Component {
                 </View>
                 </View>
             <ScrollView>
-                    <FlatList
+                <FlatList
                         data = {this.state.dishIngredients}
+                        purchaseTime = {this.state.dishPurchaseTime}
                         renderItem={({ item }) => <ItemList
                             dishName = {item.name}
                             dishType= {item.category}
                             dishInventory="5"
                             dishPrice = {item.price}
-                            dishExpire = "6th June"
+                            dishExpire = {item.purchaseTime}
                             dishBuyDate="6th June"
                         />}
+
                         keyExtractor={(item, index) => index.toString()}
                     />
             </ScrollView>

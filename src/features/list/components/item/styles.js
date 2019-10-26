@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
         color: '#E61259',
         fontFamily: 'Muli-Regular',
         fontSize:12,
-        marginLeft:200,
+        marginLeft:182,
         marginTop:1.5,
     },
 
