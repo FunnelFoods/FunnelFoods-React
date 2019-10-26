@@ -13,12 +13,6 @@ export default class ItemListPage extends Component {
         super(props);
         this.state = {
             dishIngredients: [],
-            dishName: '',
-            dishType: '',
-            dishInventory: '',
-            dishPrice: '',
-            dishExpire: '',
-            dishBuyDate: '',
         };
     }
 
@@ -26,8 +20,8 @@ export default class ItemListPage extends Component {
         fetch('https://raw.githubusercontent.com/FunnelFoods/FunnelFoods-React/master/src/appStore.json')
             .then((res) => res.json())
             .then((data) => {
-                this.setState({
-                    dishIngredients: data.ingredients,
+                this.setState({dishIngredients: data.ingredients}, function () {
+                    console.log(this.state.dishIngredients);
                 });
             });
     }
