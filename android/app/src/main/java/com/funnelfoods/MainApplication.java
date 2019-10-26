@@ -50,7 +50,8 @@ public class MainApplication extends NavigationApplication {
       // No need to add RnnPackage and MainReactPackage
       return Arrays.<ReactPackage>asList(
           new RNGoogleSigninPackage(),
-          new FBSDKPackage()
+          new FBSDKPackage(),
+          new RNCameraPackage()
       );
   }
 

@@ -131,7 +131,7 @@ android {
         applicationId "com.funnelfoods"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        missingDimensionStrategy "RNN.reactNativeVersion", "reactNative60" // See note below!
+        missingDimensionStrategy "RNN.reactNativeVersion", "reactNative60", "react-native-camera" // See note below!
         versionCode 1
         versionName "1.0"
     }

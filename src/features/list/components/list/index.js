@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import { styles as inputStyles } from "../../../../styles/authentication/input"
 import {constants} from "../../constants"
 import { colors } from '../../../../styles/colors';
-import {navigateToSignupPage} from "../../../login/actions";
+import { navigateToScanner } from "../../../../navigation/actions";
 
 export default class ItemListPage extends Component {
     render() {
@@ -18,10 +18,11 @@ export default class ItemListPage extends Component {
                         <Text style={styles.text2}>Current stock and spending of food</Text>
                     </View>
                     <View style={ styles.rightButton }>
-                        <TouchableOpacity
-                            onPress={() => Alert.alert('Pushed Add Icon!')}
-                        >
-                            <Icon name ='ios-add-circle' size={40} color='#05436F'/>
+                        <TouchableOpacity onPress={() => Alert.alert('Pushed Add Icon!')}>
+                            <Icon name ='ios-add-circle' size={35} color='#05436F' style = { styles.icon } />
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={ navigateToScanner }>
+                            <Icon name ='ios-camera' size={40} color='#05436F' style = { styles.icon }/>
                         </TouchableOpacity>
                     </View>
                 </View>

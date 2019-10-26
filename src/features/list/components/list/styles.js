@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     },
 
     background:{
-        backgroundColor: colors.primaryLight,
+        backgroundColor: 'rgba(231, 236, 240, 0.5)',
         flex:1
     },
 
@@ -45,8 +45,15 @@ const styles = StyleSheet.create({
     },
 
     rightButton:{
-        paddingLeft: '30%',
+        textAlign: 'right',
+        paddingLeft: '20%',
         paddingTop: 10.5,
+        flexDirection: "row",
+        alignItems: "center"
+    },
+
+    icon: {
+        marginRight: 10,
     },
 
     container2:{

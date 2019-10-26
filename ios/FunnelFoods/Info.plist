@@ -118,5 +118,7 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSCameraUsageDescription</key>
+	<string>Please enable access to the camera to scan your receipt.</string>
 </dict>
 </plist>
