@@ -43,8 +43,7 @@ const styles = StyleSheet.create({
         width: "102%",
         alignSelf: "stretch",
         alignItems: 'center',
-        justifyContent: 'center',
-        textAlign: "center"
+        justifyContent: 'center'
     },
     text: {
         alignSelf: "center",

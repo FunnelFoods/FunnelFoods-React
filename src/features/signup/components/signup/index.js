@@ -4,7 +4,7 @@ import { styles } from "./styles";
 import { styles as inputStyles } from "../../../../styles/authentication/input"
 import {constants} from "../../constants"
 import { colors } from '../../../../styles/colors';
-import {navigateToSignupPage} from "../../../login/actions";
+import { navigateToLoginPage } from "../../../../navigation/actions/index"
 
 export default class HelloWorldApp extends Component {
     render() {
@@ -17,14 +17,6 @@ export default class HelloWorldApp extends Component {
                                secureTextEntry={ false }
                                autoCompleteType={ 'name' }
                                textContentType={ 'name' }
-                    />
-                </View>
-                <Text style={ styles.fillAIA }>{constants.fillAIA}</Text>
-                <View style={ styles.rule }>
-                    <TextInput style={ inputStyles.input }
-                               secureTextEntry={ false }
-                               autoCompleteType={ 'cc-number' }
-                               textContentType={ 'none' }
                     />
                 </View>
                 <Text style={ styles.fillEMAIL }>{constants.fillEMAIL}</Text>
@@ -68,7 +60,7 @@ export default class HelloWorldApp extends Component {
                     {/*        color={ colors.white }*/}
                     {/*        onPress={ navigateToSignupPage } />*/}
                     <TouchableOpacity
-                        onPress={() => Alert.alert('Already have an account? Sign in!')}
+                        onPress={ navigateToLoginPage }
                     >
                         <Text style={styles.customBtnTextN}>Already have an account? Sign in!</Text>
                     </TouchableOpacity>
