@@ -32,6 +32,8 @@ target 'FunnelFoods' do
 
 
 
+  pod 'react-native-camera', :path => '../node_modules/react-native-camera'
+
   target 'FunnelFoodsTests' do
     inherit! :search_paths
     # Pods for testing
