@@ -141,6 +141,10 @@ PODS:
   - RNGoogleSignin (3.0.1):
     - GoogleSignIn (~> 5.0.0)
     - React
+  - RNSearchBar (3.5.1):
+    - React
+  - RNVectorIcons (6.6.0):
+    - React
   - yoga (0.60.4.React)
 
 DEPENDENCIES:
@@ -171,10 +175,12 @@ DEPENDENCIES:
   - ReactNativeNavigation (from `../node_modules/react-native-navigation`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
   - "RNGoogleSignin (from `../node_modules/@react-native-community/google-signin`)"
+  - RNSearchBar (from `../node_modules/react-native-search-bar`)
+  - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - AppAuth
     - boost-for-react-native
     - FBSDKCoreKit
@@ -237,6 +243,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-community/async-storage"
   RNGoogleSignin:
     :path: "../node_modules/@react-native-community/google-signin"
+  RNSearchBar:
+    :path: "../node_modules/react-native-search-bar"
+  RNVectorIcons:
+    :path: "../node_modules/react-native-vector-icons"
   yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -275,8 +285,10 @@ SPEC CHECKSUMS:
   ReactNativeNavigation: aad255980f20cc5d2001ed37972319f3789fea70
   RNCAsyncStorage: 5ae4d57458804e99f73d427214442a6b10a53856
   RNGoogleSignin: 39336070b35fc4cea6a98cf111e00480317be0ae
+  RNSearchBar: 54ad41edd78385681730b02b5e069900436d996b
+  RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   yoga: c2c050f6ae6e222534760cc82f559b89214b67e2
 
 PODFILE CHECKSUM: 577447ffbe552eee1dab9c81e7b31adcbf502026
 
-COCOAPODS: 1.7.0
+COCOAPODS: 1.8.3
