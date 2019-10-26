@@ -13,39 +13,48 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
 
+// React Native Navigation stuff
+import com.reactnativenavigation.NavigationApplication;
+import com.reactnativenavigation.react.NavigationReactNativeHost;
+import com.reactnativenavigation.react.ReactGateway;
+
+// Google signin
+import co.apptailor.googlesignin.RNGoogleSigninPackage;
+
+// Facebook signin
+import com.facebook.reactnative.androidsdk.FBSDKPackage;
+
 import java.util.List;
+import java.util.Arrays;
 
-public class MainApplication extends Application implements ReactApplication {
-
-  private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
-    @Override
-    public boolean getUseDeveloperSupport() {
-      return BuildConfig.DEBUG;
-    }
-
-    @Override
-    protected List<ReactPackage> getPackages() {
-      @SuppressWarnings("UnnecessaryLocalVariable")
-      List<ReactPackage> packages = new PackageList(this).getPackages();
-      // Packages that cannot be autolinked yet can be added manually here, for example:
-      // packages.add(new MyReactNativePackage());
-      return packages;
-    }
-
-    @Override
-    protected String getJSMainModuleName() {
-      return "index";
-    }
-  };
-
+public class MainApplication extends NavigationApplication {
   @Override
-  public ReactNativeHost getReactNativeHost() {
-    return mReactNativeHost;
+  protected ReactGateway createReactGateway() {
+      ReactNativeHost host = new NavigationReactNativeHost(this, isDebug(), createAdditionalReactPackages()) {
+          @Override
+          protected String getJSMainModuleName() {
+              return "index";
+          }
+      };
+      return new ReactGateway(this, isDebug(), host);
   }
 
   @Override
-  public void onCreate() {
-    super.onCreate();
-    SoLoader.init(this, /* native exopackage */ false);
+  public boolean isDebug() {
+      return BuildConfig.DEBUG;
+  }
+
+  protected List<ReactPackage> getPackages() {
+      // Add additional packages you require here
+      // No need to add RnnPackage and MainReactPackage
+      return Arrays.<ReactPackage>asList(
+          new RNGoogleSigninPackage(),
+          new FBSDKPackage()
+      );
+  }
+
+  @Override
+  public List<ReactPackage> createAdditionalReactPackages() {
+      return getPackages();
   }
 }

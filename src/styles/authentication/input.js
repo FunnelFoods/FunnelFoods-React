@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
     },
     input: {
         height: 40,
+        fontSize: 20,
         borderBottomColor: "white",
         borderBottomWidth: 2,
         color: "white",

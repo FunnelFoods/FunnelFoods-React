@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "53772975891",
+    "firebase_url": "https://funnelfoods.firebaseio.com",
+    "project_id": "funnelfoods",
+    "storage_bucket": "funnelfoods.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:53772975891:android:c8c0878bf1b662669424e6",
+        "android_client_info": {
+          "package_name": "com.funnelfoods"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "53772975891-u8dc358j7jt275c1p3d6keh8jsjiiegk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuJ_ub3r2Iya6xHrxCESVFY3NSqA87nRY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "53772975891-u8dc358j7jt275c1p3d6keh8jsjiiegk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "53772975891-i54rm0fbuhj8lifr9huhj5jnq4h72p3b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.funnel.funnel"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

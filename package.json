@@ -8,8 +8,13 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.6.2",
+    "@react-native-community/google-signin": "^3.0.1",
+    "apsl-react-native-button": "^3.1.1",
+    "lodash": "^4.17.15",
     "react": "16.8.6",
     "react-native": "0.60.4",
+    "react-native-fbsdk": "^1.0.4",
     "react-native-navigation": "^3.2.0",
     "react-native-search-bar": "^3.5.0",
     "react-native-vector-icons": "^6.6.0",

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>53772975891-i54rm0fbuhj8lifr9huhj5jnq4h72p3b.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.53772975891-i54rm0fbuhj8lifr9huhj5jnq4h72p3b</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBVBsBWCix3q9-5xyUbBkyRIvBJOXea8YM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>53772975891</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.funnel.funnel</string>
+	<key>PROJECT_ID</key>
+	<string>funnelfoods</string>
+	<key>STORAGE_BUCKET</key>
+	<string>funnelfoods.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:53772975891:ios:eead4ac915a69636</string>
+	<key>DATABASE_URL</key>
+	<string>https://funnelfoods.firebaseio.com</string>
+</dict>
+</plist>
