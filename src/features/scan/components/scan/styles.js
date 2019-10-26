@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
             alignItems: 'flex-end'
         },
         bottomBar: {
-            height: '10%',
+            height: '12%',
             flex: 0,
             flexDirection: 'row',
             justifyContent: 'center',

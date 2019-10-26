@@ -12,6 +12,7 @@
 		0ABF64E7B7F742F4B2899795 /* Muli-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF07FDC254424A86A57846BF /* Muli-Regular.ttf */; };
 		0C9542FCF2204ACE9B0062F7 /* FilsonSoftRegular-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7171B76A90A846AE9B3F2848 /* FilsonSoftRegular-Italic.otf */; };
 		101F4E4F235455E100FA3C8F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 101F4E4E235455E100FA3C8F /* GoogleService-Info.plist */; };
+		104500D82364348100B4EB2B /* libRNTextDetector.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 104500D72364348100B4EB2B /* libRNTextDetector.a */; };
 		10B3BC218AAC47E586AB1ECE /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D325C51594D48CFBAB1D7DE /* FontAwesome.ttf */; };
 		1318EC9232564C648758BAF2 /* Muli-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F99CF9B5D8441C0B7BA926F /* Muli-Italic.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
@@ -65,6 +66,13 @@
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = FunnelFoods;
 		};
+		104500D123642E2F00B4EB2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 104500CD23642E2F00B4EB2B /* RNTextDetector.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNTextDetector;
+		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
@@ -82,6 +90,9 @@
 		0FF8F5C975CE42B88926CCF1 /* Muli-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Muli-Bold.ttf"; path = "../src/assets/fonts/Muli-Bold.ttf"; sourceTree = "<group>"; };
 		101F4E4C235451AC00FA3C8F /* libRNGoogleSignin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNGoogleSignin.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		101F4E4E235455E100FA3C8F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		104500CD23642E2F00B4EB2B /* RNTextDetector.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNTextDetector.xcodeproj; path = "../node_modules/react-native-text-detector/ios/RNTextDetector.xcodeproj"; sourceTree = "<group>"; };
+		104500D323642E5000B4EB2B /* libRNTextDetector.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNTextDetector.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		104500D72364348100B4EB2B /* libRNTextDetector.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNTextDetector.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		130D7A4B07DE45D184ED3631 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* FunnelFoods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunnelFoods.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = FunnelFoods/AppDelegate.h; sourceTree = "<group>"; };
@@ -153,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				104500D82364348100B4EB2B /* libRNTextDetector.a in Frameworks */,
 				F63F4A51F694B503BF911A99 /* libPods-FunnelFoods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,6 +203,14 @@
 				00E356F11AD99517003FC87E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		104500CE23642E2F00B4EB2B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				104500D223642E2F00B4EB2B /* libRNTextDetector.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		12705E002DB34FCDB3D47F5C /* Resources */ = {
@@ -252,6 +272,8 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				104500D72364348100B4EB2B /* libRNTextDetector.a */,
+				104500D323642E5000B4EB2B /* libRNTextDetector.a */,
 				101F4E4C235451AC00FA3C8F /* libRNGoogleSignin.a */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
@@ -266,6 +288,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				104500CD23642E2F00B4EB2B /* RNTextDetector.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -436,6 +459,12 @@
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 104500CE23642E2F00B4EB2B /* Products */;
+					ProjectRef = 104500CD23642E2F00B4EB2B /* RNTextDetector.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* FunnelFoods */,
@@ -445,6 +474,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		104500D223642E2F00B4EB2B /* libRNTextDetector.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNTextDetector.a;
+			remoteRef = 104500D123642E2F00B4EB2B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00E356EC1AD99517003FC87E /* Resources */ = {
@@ -596,6 +635,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FunnelFoods/Pods-FunnelFoods-resources.sh",
 				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseMLVisionTextModel/GoogleMVTextDetectorResources.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
@@ -617,6 +657,7 @@
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMVTextDetectorResources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",

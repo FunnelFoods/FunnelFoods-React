@@ -140,7 +140,7 @@ export default class LoginPage extends Component {
             });
             // google services are available
         } catch (err) {
-            this.showSignInError('play services are not available');
+            this.showSignInError('Play services are not available.');
         }
     };
 

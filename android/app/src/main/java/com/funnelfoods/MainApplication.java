@@ -18,6 +18,7 @@ import com.facebook.soloader.SoLoader;
 import com.reactnativenavigation.NavigationApplication;
 import com.reactnativenavigation.react.NavigationReactNativeHost;
 import com.reactnativenavigation.react.ReactGateway;
+import com.fetchsky.RNTextDetector.RNTextDetectorPackage;
 
 // Google signin
 import co.apptailor.googlesignin.RNGoogleSigninPackage;
@@ -51,7 +52,8 @@ public class MainApplication extends NavigationApplication {
       return Arrays.<ReactPackage>asList(
           new RNGoogleSigninPackage(),
           new FBSDKPackage(),
-          new RNCameraPackage()
+          new RNCameraPackage(),
+          new RNTextDetectorPackage()
       );
   }
 
