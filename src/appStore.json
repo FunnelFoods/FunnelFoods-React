@@ -27,7 +27,7 @@
       "amount": 2,
       "unit": "kg",
       "category": "Poultry",
-      "purchaseTime": 891238,
+      "purchaseTime": 1572130684,
       "expiration": 12344551,
       "_comment": "##### purchaseTime and expiration should be in a universal time, like seconds after epoch"
     },
