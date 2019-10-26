@@ -23,7 +23,7 @@
     {
       "UUID": 123124,
       "name": "Pork",
-      "price": 23.8,
+      "price": 23.80,
       "amount": 2,
       "unit": "kg",
       "category": "Poultry",
@@ -34,7 +34,7 @@
     {
       "UUID": 123511,
       "name": "Beefsteak",
-      "price": 18.1,
+      "price": 18.10,
       "amount": 3,
       "unit": "items",
       "category": "Meat",
