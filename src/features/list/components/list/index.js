@@ -3,6 +3,10 @@ import {Text, TextInput, View, FlatList, Alert, TouchableOpacity, ScrollView} fr
 import { styles } from "./styles";
 import Icon from 'react-native-vector-icons/Ionicons';
 import ItemList from "../item";
+import { styles as inputStyles } from "../../../../styles/authentication/input"
+import {constants} from "../../constants"
+import { colors } from '../../../../styles/colors';
+import { navigateToScanner } from "../../../../navigation/actions";
 
 export default class ItemListPage extends Component {
     constructor(props) {
@@ -40,10 +44,11 @@ export default class ItemListPage extends Component {
                         <Text style={styles.text2}>Current stock and spending of food</Text>
                     </View>
                     <View style={ styles.rightButton }>
-                        <TouchableOpacity
-                            onPress={() => Alert.alert('Pushed Add Icon!')}
-                        >
-                            <Icon name ='ios-add-circle' size={40} color='#05436F'/>
+                        <TouchableOpacity onPress={() => Alert.alert('Pushed Add Icon!')}>
+                            <Icon name ='ios-add-circle' size={35} color='#05436F' style = { styles.icon } />
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={ navigateToScanner }>
+                            <Icon name ='ios-camera' size={40} color='#05436F' style = { styles.icon }/>
                         </TouchableOpacity>
                     </View>
                 </View>

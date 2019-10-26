@@ -7,6 +7,7 @@ import com.facebook.react.PackageList;
 import com.facebook.hermes.reactexecutor.HermesExecutorFactory;
 import com.facebook.react.bridge.JavaScriptExecutorFactory;
 import com.facebook.react.ReactApplication;
+import org.reactnative.camera.RNCameraPackage;
 import org.umhan35.RNSearchBarPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.facebook.react.ReactNativeHost;
@@ -17,6 +18,7 @@ import com.facebook.soloader.SoLoader;
 import com.reactnativenavigation.NavigationApplication;
 import com.reactnativenavigation.react.NavigationReactNativeHost;
 import com.reactnativenavigation.react.ReactGateway;
+import com.fetchsky.RNTextDetector.RNTextDetectorPackage;
 
 // Google signin
 import co.apptailor.googlesignin.RNGoogleSigninPackage;
@@ -49,7 +51,9 @@ public class MainApplication extends NavigationApplication {
       // No need to add RnnPackage and MainReactPackage
       return Arrays.<ReactPackage>asList(
           new RNGoogleSigninPackage(),
-          new FBSDKPackage()
+          new FBSDKPackage(),
+          new RNCameraPackage(),
+          new RNTextDetectorPackage()
       );
   }
 

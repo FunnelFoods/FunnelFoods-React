@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { LoginButton, AccessToken } from 'react-native-fbsdk';
 import { GoogleSignin, GoogleSigninButton, statusCodes } from '@react-native-community/google-signin';
-import { Text, TextInput, View, Image, Button, Alert } from 'react-native';
+import { Text, TextInput, View, Image, Button, Alert, ScrollView } from 'react-native';
 import { styles } from "./styles";
 import { styles as inputStyles } from "../../../../styles/authentication/input";
 import { constants } from "../../constants";
@@ -24,67 +24,69 @@ export default class LoginPage extends Component {
     }
     render() {
         return (
-            <View style={ styles.background }>
-                <Image source={ require('../../../../assets/logo.png') }
-                       style={ styles.logo }/>
-                <View style={ styles.container }>
-                    <Text style={ inputStyles.field }>{ constants.fields.email }</Text>
-                    <TextInput style={ inputStyles.input }
-                               secureTextEntry={ false }
-                               autoCompleteType={ 'email' }
-                               textContentType={ 'emailAddress' }
-                    />
-                </View>
-                <View style={ styles.container }>
-                    <Text style={ inputStyles.field }>{ constants.fields.password }</Text>
-                    <TextInput style={ inputStyles.input }
-                               secureTextEntry={ true }
-                               autoCompleteType={ 'password' }
-                               textContentType={ 'password' }
-                    />
-                </View>
-                <View style={ styles.container }>
-                    <View style={ styles.buttonContainer }>
-                        { /* TODO: Implement button behavior */ }
-                        <Button title="sign in"
-                                color={ colors.primaryLight }
-                                onPress={ navigateToMainApp }
+            <ScrollView style = {styles.scrollBackground}>
+                <View style={ styles.background }>
+                    <Image source={ require('../../../../assets/logo.png') }
+                           style={ styles.logo }/>
+                    <View style={ styles.container }>
+                        <Text style={ inputStyles.field }>{ constants.fields.email }</Text>
+                        <TextInput style={ inputStyles.input }
+                                   secureTextEntry={ false }
+                                   autoCompleteType={ 'email' }
+                                   textContentType={ 'emailAddress' }
                         />
                     </View>
+                    <View style={ styles.container }>
+                        <Text style={ inputStyles.field }>{ constants.fields.password }</Text>
+                        <TextInput style={ inputStyles.input }
+                                   secureTextEntry={ true }
+                                   autoCompleteType={ 'password' }
+                                   textContentType={ 'password' }
+                        />
+                    </View>
+                    <View style={ styles.container }>
+                        <View style={ styles.buttonContainer }>
+                            { /* TODO: Implement button behavior */ }
+                            <Button title="sign in"
+                                    color={ colors.primaryLight }
+                                    onPress={ navigateToMainApp }
+                            />
+                        </View>
+                    </View>
+                    <View style = { styles.container }>
+                        <LoginButton style = { styles.facebookButtonContainer }
+                                     onLoginFinished={
+                                         (error, result) => {
+                                             if (error) {
+                                                 console.log("login has error: " + result.error);
+                                             } else if (result.isCancelled) {
+                                                 console.log("login is cancelled.");
+                                             } else {
+                                                 AccessToken.getCurrentAccessToken().then(
+                                                     (data) => {
+                                                         console.log(data.accessToken.toString())
+                                                     }
+                                                 )
+                                             }
+                                         }
+                                     }
+                                     onLogoutFinished={() => console.log("logout.")}/>
+                    </View>
+                    <View style = { styles.container }>
+                        <GoogleSigninButton
+                            size={ GoogleSigninButton.Size.Wide }
+                            style={ styles.googleButtonContainer }
+                            color={GoogleSigninButton.Color.Light}
+                            onPress={this.googleSignIn}
+                            disabled={this.state.isSigninInProgress} />
+                    </View>
+                    <View style={ styles.container }>
+                        <Button title={ "Don’t have an account? Sign up!" }
+                                color={ colors.white }
+                                onPress={ navigateToSignupPage } />
+                    </View>
                 </View>
-                <View style = { styles.container }>
-                    <LoginButton style = { styles.facebookButtonContainer }
-                        onLoginFinished={
-                            (error, result) => {
-                                if (error) {
-                                    console.log("login has error: " + result.error);
-                                } else if (result.isCancelled) {
-                                    console.log("login is cancelled.");
-                                } else {
-                                    AccessToken.getCurrentAccessToken().then(
-                                        (data) => {
-                                            console.log(data.accessToken.toString())
-                                        }
-                                    )
-                                }
-                            }
-                        }
-                        onLogoutFinished={() => console.log("logout.")}/>
-                </View>
-                <View style = { styles.container }>
-                    <GoogleSigninButton
-                        size={ GoogleSigninButton.Size.Wide }
-                        style={ styles.googleButtonContainer }
-                        color={GoogleSigninButton.Color.Light}
-                        onPress={this.googleSignIn}
-                        disabled={this.state.isSigninInProgress} />
-                </View>
-                <View style={ styles.container }>
-                    <Button title={ "Don’t have an account? Sign up!" }
-                            color={ colors.white }
-                            onPress={ navigateToSignupPage } />
-                </View>
-            </View>
+            </ScrollView>
         );
     }
     /**
@@ -138,7 +140,7 @@ export default class LoginPage extends Component {
             });
             // google services are available
         } catch (err) {
-            this.showSignInError('play services are not available');
+            this.showSignInError('Play services are not available.');
         }
     };
 

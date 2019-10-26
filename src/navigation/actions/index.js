@@ -20,6 +20,16 @@ export const navigateToLoginPage = () => {
     });
 };
 
+export const navigateToScanner = () => {
+    Navigation.setRoot({
+        root: {
+            component: {
+                name: 'scannerView'
+            }
+        }
+    })
+}
+
 export const navigateToMainApp = () => {
     Navigation.setRoot({
         root: {

@@ -2,6 +2,9 @@ import { StyleSheet } from 'react-native';
 import { colors } from '../../../../styles/colors';
 
 const styles = StyleSheet.create({
+    scrollBackground: {
+        backgroundColor: colors.primaryLight,
+    },
     background: {
         flex: 1,
         flexDirection: "column",
@@ -43,8 +46,7 @@ const styles = StyleSheet.create({
         width: "102%",
         alignSelf: "stretch",
         alignItems: 'center',
-        justifyContent: 'center',
-        textAlign: "center"
+        justifyContent: 'center'
     },
     text: {
         alignSelf: "center",

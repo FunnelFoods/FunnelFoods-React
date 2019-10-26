@@ -2,6 +2,9 @@ import { StyleSheet } from 'react-native';
 import { colors } from '../../../../styles/colors';
 
 const styles = StyleSheet.create({
+    scrollBackground: {
+        backgroundColor: colors.primaryLight,
+    },
     background: {
         flex: 1,
         backgroundColor: '#FF7F5A',

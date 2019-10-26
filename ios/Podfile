@@ -32,9 +32,11 @@ target 'FunnelFoods' do
 
 
 
+  pod 'react-native-camera', :path => '../node_modules/react-native-camera'
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
-
   pod 'RNSearchBar', :path => '../node_modules/react-native-search-bar'
+  pod 'RNTextDetector', path: '../node_modules/react-native-text-detector/ios'
+
 
   target 'FunnelFoodsTests' do
     inherit! :search_paths
