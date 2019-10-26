@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     },
 
     background:{
-        backgroundColor: 'rgba(231, 236, 240, 0.5)',
+        backgroundColor: colors.primaryLight,
         flex:1
     },
 
