@@ -37,7 +37,6 @@ target 'FunnelFoods' do
   pod 'RNSearchBar', :path => '../node_modules/react-native-search-bar'
   pod 'RNTextDetector', path: '../node_modules/react-native-text-detector/ios'
 
-  pod 'RNImageRotate', :path => '../node_modules/react-native-image-rotate'
 
   target 'FunnelFoodsTests' do
     inherit! :search_paths

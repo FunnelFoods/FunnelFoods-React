@@ -7,7 +7,6 @@ import com.facebook.react.PackageList;
 import com.facebook.hermes.reactexecutor.HermesExecutorFactory;
 import com.facebook.react.bridge.JavaScriptExecutorFactory;
 import com.facebook.react.ReactApplication;
-import io.codebakery.imagerotate.ImageRotatePackage;
 import org.reactnative.camera.RNCameraPackage;
 import org.umhan35.RNSearchBarPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
