@@ -189,6 +189,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-image-rotate')
     implementation project(':react-native-camera')
     implementation project(':react-native-search-bar')
     implementation project(':react-native-vector-icons')

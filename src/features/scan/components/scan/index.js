@@ -57,7 +57,8 @@ export default class ScannerView extends Component {
                 const options = {
                     quality: 1.0,
                     base64: true,
-                    skipProcessing: true
+                    forceUpOrientation: true,
+                    fixOrientation: true
                 };
                 const { uri } = await this.camera.takePictureAsync(options);
                 const visionResp = await RNTextDetector.detectFromUri(uri);
