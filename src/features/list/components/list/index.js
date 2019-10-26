@@ -22,14 +22,12 @@ export default class ItemListPage extends Component {
         };
     }
 
-    componentWillMount() {
+    componentDidMount() {
         fetch('https://raw.githubusercontent.com/FunnelFoods/FunnelFoods-React/master/src/appStore.json')
             .then((res) => res.json())
             .then((data) => {
                 this.setState({
                     dishIngredients: data.ingredients,
-                    // dishName: data.ingredients[0].name,
-                    // dishType: data.ingredients[0].category
                 });
             });
     }
@@ -80,6 +78,7 @@ export default class ItemListPage extends Component {
                             dishExpire = "6th June"
                             dishBuyDate="6th June"
                         />}
+                        keyExtractor={(item, index) => index.toString()}
                     />
             </ScrollView>
 

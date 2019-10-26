@@ -1,38 +1,8 @@
 import React, { Component } from 'react';
 import {Text, TextInput, View, Button, Alert, TouchableOpacity, ScrollView} from 'react-native';
 import { styles } from "./styles";
-import Icon from 'react-native-vector-icons/Ionicons';
-import data from "../../../../appStore";
-import { styles as inputStyles } from "../../../../styles/authentication/input";
-import {constants} from "../../constants";
-import { colors } from '../../../../styles/colors';
-import {navigateToSignupPage} from "../../../login/actions";
 
 export default class ItemList extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            dishName: '',
-            dishType: '',
-            dishInventory: '',
-            dishPrice: '',
-            dishExpire: '',
-            dishBuyDate: '',
-        };
-    }
-
-    componentWillMount() {
-        fetch('https://raw.githubusercontent.com/FunnelFoods/FunnelFoods-React/master/src/appStore.json')
-            .then((res) => res.json())
-            .then((data) => {
-                this.setState({
-                    dishIngredients: data.ingredients,
-                    dishName: data.ingredients[0].name,
-                    dishType: data.ingredients[0].category
-                });
-            });
-    }
-
     render() {
         return (
                     <View style = {styles.container2}>

@@ -248,7 +248,7 @@ PODS:
   - RNGoogleSignin (3.0.1):
     - GoogleSignIn (~> 5.0.0)
     - React
-  - RNSearchBar (3.5.0):
+  - RNSearchBar (3.5.1):
     - React
   - RNTextDetector (0.0.6):
     - Firebase/Core
@@ -293,7 +293,7 @@ DEPENDENCIES:
   - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AppAuth
     - boost-for-react-native
     - FBSDKCoreKit
@@ -434,11 +434,11 @@ SPEC CHECKSUMS:
   ReactNativeNavigation: aad255980f20cc5d2001ed37972319f3789fea70
   RNCAsyncStorage: 5ae4d57458804e99f73d427214442a6b10a53856
   RNGoogleSignin: 39336070b35fc4cea6a98cf111e00480317be0ae
-  RNSearchBar: f6bb44cf1b0974bc01ae9a27417d3008108a6c92
+  RNSearchBar: 54ad41edd78385681730b02b5e069900436d996b
   RNTextDetector: e11784b454e3a72eef23e7b5e89be6def0d4e1cd
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   yoga: c2c050f6ae6e222534760cc82f559b89214b67e2
 
 PODFILE CHECKSUM: 428d89cf94ea7eba968d6b47a19dc513bbd2f070
 
-COCOAPODS: 1.7.0
+COCOAPODS: 1.8.3
