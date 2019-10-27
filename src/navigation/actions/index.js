@@ -1,4 +1,5 @@
 import { Navigation } from "react-native-navigation";
+import { listIcon, cookIcon, settingsIcon } from "../components/icons";
 
 export const navigateToSignupPage = () => {
     Navigation.setRoot({
@@ -40,6 +41,7 @@ export const navigateToMainApp = () => {
                         options: {
                             bottomTab: {
                                 text: 'List',
+                                icon: listIcon
                             }
                         }
                     }
@@ -49,6 +51,7 @@ export const navigateToMainApp = () => {
                         options: {
                             bottomTab: {
                                 text: 'Cook',
+                                icon: cookIcon
                             }
                         }
                     }
@@ -58,6 +61,7 @@ export const navigateToMainApp = () => {
                         options: {
                             bottomTab: {
                                 text: 'Settings',
+                                icon: settingsIcon
                             }
                         }
                     }

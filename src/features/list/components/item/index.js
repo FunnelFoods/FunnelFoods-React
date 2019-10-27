@@ -15,14 +15,14 @@ export default class ItemList extends Component {
                             </Text>
                             <Text style={styles.inventory}>
                                 <Text style={styles.underline}>
-                                    {this.props.dishInventory} bundles
+                                    {this.props.dishInventory}
                                 </Text> in stock
                             </Text>
                             <Text style = {styles.price}>
                                 $ {this.props.dishPrice}
                             </Text>
-                            <Text style = {styles.expiration}>Expire on {this.props.dishExpire}</Text>
-                            <Text style={styles.purchaseDate}>bought {this.props.dishBuyDate}</Text>
+                            <Text style = {styles.expiration}>Expires: {this.props.dishExpire}</Text>
+                            <Text style={styles.purchaseDate}>Bought: {this.props.dishBuyDate}</Text>
                         </View>
                     </View>
         );

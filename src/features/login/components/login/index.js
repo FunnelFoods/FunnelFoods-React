@@ -26,7 +26,7 @@ export default class LoginPage extends Component {
         return (
             <ScrollView style = {styles.scrollBackground}>
                 <View style={ styles.background }>
-                    <Image source={ require('../../../../assets/logo.png') }
+                    <Image source={ require('../../../../assets/logo/logo.png') }
                            style={ styles.logo }/>
                     <View style={ styles.container }>
                         <Text style={ inputStyles.field }>{ constants.fields.email }</Text>

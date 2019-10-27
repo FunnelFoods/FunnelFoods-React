@@ -73,19 +73,25 @@ export default class ScannerView extends Component {
 
     processResponse = async(results) => {
         // Choose the most confident group of text
-        let receiptLines = results[0].text.split("\n");
+        let receiptLines = [];
+        for (var i = 0; i < results.length; i++) {
+            receiptLines = receiptLines.concat(results[i].text.split("\n"));
+        }
+        for (var j = 0; j < receiptLines.length; j++) {
+            receiptLines[j] += " 2.53";
+        }
         console.log(receiptLines);
         try {
-            let response = await fetch('http://api.funnelfoods.com/', {
-                    method: 'POST',
+            let response = await fetch(
+                `http://api.funnelfoods.com/api/receiptparse/items/parse?input=${JSON.stringify(receiptLines)}`, {
+                    method: 'GET',
                     headers: {
-                        Accept: 'application/json',
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(receiptLines)
+                        'Content-Type': 'application/json'
+                    }
                 }
             );
-            return await response.json();
+            const result = await response.json();
+            console.log(result);
         } catch (error) {
             Alert.alert("Failed to connect", "Make sure that your internet connection is working and try again!");
         }
