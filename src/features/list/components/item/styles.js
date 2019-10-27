@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
         color: '#05436F',
         fontFamily: 'Muli-Bold',
         fontSize:20,
-        marginLeft:9,
+        marginLeft:8.5,
         marginTop:3,
     },
 
