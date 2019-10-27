@@ -4,7 +4,7 @@ import {
     View,
     TouchableOpacity,
     ScrollView,
-    FlatList, Dimensions, ImageBackground
+    FlatList, Dimensions, ImageBackground, Alert
 } from 'react-native';
 import { styles } from "./styles";
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -128,8 +128,12 @@ export default class RecipeView extends Component {
     render() {
         return (
             <View style={styles.container}>
-
                 <ImageBackground style={{...styles.banner, height: this.state.bannerHeight}}>
+                    <View style = {styles.crossButton}>
+                        <TouchableOpacity onPress={() => Alert.alert('Pushed Add Icon!')}>
+                            <Icon name ='ios-arrow-back' size={30} color={colors.white} />
+                        </TouchableOpacity>
+                    </View>
                     <Text style={styles.title}>{this.state.recipe.data.title}</Text>
                     <View style={styles.stats}>
                         <View style={styles.stars}><Icon name="ios-star" size={25} color={colors.white} style={styles.starIcon}/><Text style={styles.statText}>{this.state.recipe.data.rating}</Text></View>

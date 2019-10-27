@@ -5,6 +5,11 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
+    crossButton: {
+        position: 'absolute',
+        left: 22,
+        top: 22,
+    },
     banner: {
         flex: 0,
         justifyContent: 'flex-end',
@@ -65,10 +70,11 @@ const styles = StyleSheet.create({
     sectionText: {
         fontFamily: 'Muli-Regular',
         color: colors.primaryDark,
-        fontSize: 16,
+        fontSize: 18,
         marginLeft: 20,
         marginRight: 20,
-        marginBottom: 15,
+        marginBottom: 35,
+        lineHeight: 35
     }
 });
 
