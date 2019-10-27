@@ -29,7 +29,17 @@ export const navigateToScanner = () => {
             }
         }
     })
-}
+};
+
+export const testRecipeView = () => {
+    Navigation.setRoot({
+        root: {
+            component: {
+                name: 'recipeView'
+            }
+        }
+    })
+};
 
 export const navigateToMainApp = () => {
     Navigation.setRoot({
