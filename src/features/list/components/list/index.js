@@ -7,6 +7,8 @@ import { navigateToScanner } from "../../../../navigation/actions";
 import Moment from 'react-moment';
 import 'moment-timezone';
 import moment from "moment";
+import {colors} from "../../../../styles/colors";
+import {Navigation} from "react-native-navigation";
 
 export default class ItemListPage extends Component {
     constructor(props) {
@@ -20,9 +22,7 @@ export default class ItemListPage extends Component {
         fetch('https://raw.githubusercontent.com/FunnelFoods/FunnelFoods-React/master/src/appStore.json')
             .then((res) => res.json())
             .then((data) => {
-                this.setState({dishIngredients: data.ingredients}, function () {
-                    console.log(this.state.dishIngredients);
-                });
+                this.setState({dishIngredients: data.ingredients});
                 let stateCopy = JSON.parse(JSON.stringify(this.state.dishIngredients));
                 for (let i = 0; i<stateCopy.length; i++) {
                     stateCopy[i].purchaseTime = moment(new Date(stateCopy[i].purchaseTime * 1000)).format('MM/DD/YYYY');
@@ -31,6 +31,7 @@ export default class ItemListPage extends Component {
                         dishIngredients:stateCopy
                     })
             });
+        console.log(this.props.results);
     }
 
     render() {
@@ -44,10 +45,18 @@ export default class ItemListPage extends Component {
                     </View>
                     <View style={ styles.rightButton }>
                         <TouchableOpacity onPress={() => Alert.alert('Pushed Add Icon!')}>
-                            <Icon name ='ios-add-circle' size={35} color='#05436F' style = { styles.icon } />
+                            <Icon name ='ios-add-circle' size={35} color={colors.white} style = { styles.icon } />
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={ navigateToScanner }>
-                            <Icon name ='ios-camera' size={40} color='#05436F' style = { styles.icon }/>
+                        <TouchableOpacity onPress={() => Navigation.showModal({
+                            stack: {
+                                children: [{
+                                    component: {
+                                        name: 'scannerView',
+                                    }
+                                }]
+                            }
+                        })}>
+                            <Icon name ='ios-camera' size={40} color={colors.white} style = { styles.icon }/>
                         </TouchableOpacity>
                     </View>
                 </View>

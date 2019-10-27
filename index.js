@@ -37,7 +37,7 @@ Navigation.events().registerAppLaunchedListener(() => {
             visible: false,
         }
     });
-    testRecipeView();
+    navigateToMainApp();
     /**
     Navigation.setRoot({
         root: {

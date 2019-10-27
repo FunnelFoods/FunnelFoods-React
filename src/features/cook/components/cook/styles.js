@@ -7,10 +7,11 @@ const styles = StyleSheet.create({
         flex: 1
     },
     headerContainer: {
-        backgroundColor: '#E61259',
+        backgroundColor: colors.primaryNeon,
         paddingHorizontal: 32,
         flexDirection: "row",
-        paddingBottom: 10
+        paddingBottom: 10,
+        height: 110
     },
     titleContainer: {
         marginTop: 50,

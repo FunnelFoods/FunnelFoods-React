@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     crossButton: {
         position: 'absolute',
         left: 22,
-        top: 22,
+        top: 30,
     },
     banner: {
         flex: 0,
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
     },
     controlTab: {
-        height: 50,
+        height: '8%',
         paddingTop: '3%',
         marginLeft: '3%',
         marginRight: '3%',

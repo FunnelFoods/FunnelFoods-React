@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
 
     container1: {
         height: 110,
-        backgroundColor: 'white',
+        backgroundColor: colors.primaryDark,
         elevation: 3,
         paddingHorizontal: 32,
         paddingTop: 18,
@@ -33,13 +33,13 @@ const styles = StyleSheet.create({
 
 
     text1: {
-        color: '#05436F',
+        color: colors.white,
         fontSize: 24,
         fontFamily: 'FilsonSoftMedium',
     },
 
     text2: {
-        color: '#05436F',
+        color: colors.white,
         fontSize: 12,
         fontFamily: 'Muli-Regular',
     },

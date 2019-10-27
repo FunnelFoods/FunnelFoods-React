@@ -10,6 +10,7 @@ import { styles } from "./styles";
 import Icon from 'react-native-vector-icons/Ionicons';
 import {colors} from "../../../../styles/colors";
 import SegmentedControlTab from 'react-native-segmented-control-tab'
+import { Navigation } from "react-native-navigation";
 
 export default class RecipeView extends Component {
     constructor(){
@@ -101,7 +102,8 @@ export default class RecipeView extends Component {
     };
 
     handleIndexChange = (index) => {
-        this.refs.scroll.scrollTo({x:0, y:0, animated: false}); // will scroll to the top at y-position 0
+        this.refs.scroll.scrollTo({x:0, y:0, animated: true}); // will scroll to the top at y-position 0
+        this.refs.scroll.scrollTo({x:0, y:0, animated: false}); // reset without animation to make sure it stays
         this.setState({
             ...this.state,
             selectedIndex: index,
@@ -130,7 +132,7 @@ export default class RecipeView extends Component {
             <View style={styles.container}>
                 <ImageBackground style={{...styles.banner, height: this.state.bannerHeight}}>
                     <View style = {styles.crossButton}>
-                        <TouchableOpacity onPress={() => Alert.alert('Pushed Add Icon!')}>
+                        <TouchableOpacity onPress={ () => Navigation.pop(this.props.componentId) }>
                             <Icon name ='ios-arrow-back' size={30} color={colors.white} />
                         </TouchableOpacity>
                     </View>

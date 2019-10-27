@@ -1,5 +1,6 @@
 import { Navigation } from "react-native-navigation";
 import { listIcon, cookIcon, settingsIcon } from "../components/icons";
+import { colors } from "../../styles/colors";
 
 export const navigateToSignupPage = () => {
     Navigation.setRoot({
@@ -46,22 +47,33 @@ export const navigateToMainApp = () => {
         root: {
             bottomTabs: {
                 children: [{
-                    component: {
-                        name: "itemListPage",
+                    stack: {
+                        children: [
+                            {
+                                component: {
+                                    name: 'itemListPage'
+                            }
+                        }],
                         options: {
                             bottomTab: {
                                 text: 'List',
-                                icon: listIcon
+                                icon: listIcon,
+                                color: colors.primaryDark
                             }
                         }
                     }
                 }, {
-                    component: {
-                        name: 'cookPage',
+                    stack:{
+                       children: [{
+                           component: {
+                               name: 'cookPage',
+                           }
+                       }],
                         options: {
                             bottomTab: {
                                 text: 'Cook',
-                                icon: cookIcon
+                                icon: cookIcon,
+                                color: colors.primaryDark
                             }
                         }
                     }
@@ -71,7 +83,8 @@ export const navigateToMainApp = () => {
                         options: {
                             bottomTab: {
                                 text: 'Settings',
-                                icon: settingsIcon
+                                icon: settingsIcon,
+                                color: colors.primaryDark
                             }
                         }
                     }

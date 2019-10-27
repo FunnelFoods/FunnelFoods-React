@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import Recipe from "../recipe/index";
 import {constants} from "../../constants";
 import {colors} from "../../../../styles/colors";
+import {Navigation} from "react-native-navigation";
 
 
 export default class CookPage extends Component {
@@ -34,7 +35,14 @@ export default class CookPage extends Component {
                         </Text>
                     </View>
                     <View style={ styles.searchContainer }>
-                        <TouchableOpacity onPress={() => Alert.alert('Pushed Search Icion')}>
+                        <TouchableOpacity onPress={() => Navigation.push(this.props.componentId, {
+                            component: {
+                                name: 'recipeView',
+                                passProps: {
+                                    parentView: this.props.componentId,
+                                }
+                            }
+                        })}>
                             <Icon name ='ios-search' size={35} color={ colors.white } style = { styles.icon } />
                         </TouchableOpacity>
                     </View>

@@ -4,8 +4,9 @@ import { RNCamera } from 'react-native-camera';
 import Icon from 'react-native-vector-icons/Ionicons';
 import RNTextDetector from "react-native-text-detector";
 import { styles } from "./styles.js";
-import { navigateToMainApp } from "../../../../navigation/actions";
+import { Navigation } from "react-native-navigation";
 import {colors} from "../../../../styles/colors";
+import {cookIcon, listIcon, settingsIcon} from "../../../../navigation/components/icons";
 
 export default class ScannerView extends Component {
     constructor() {
@@ -20,7 +21,7 @@ export default class ScannerView extends Component {
         return (
                 <View style={styles.container}>
                     <View style={styles.topBar}>
-                        <TouchableOpacity onPress={ navigateToMainApp } style={styles.backButton}>
+                        <TouchableOpacity onPress={() => Navigation.dismissModal(this.props.componentId)}  style={styles.backButton}>
                             <Icon name ='ios-arrow-back' size={35} color={colors.white}/>
                         </TouchableOpacity>
                         <TouchableOpacity onPress={ this.toggleFlashState } style={styles.flashButton}>
@@ -64,7 +65,57 @@ export default class ScannerView extends Component {
                 };
                 const { uri } = await this.camera.takePictureAsync(options);
                 const results = await RNTextDetector.detectFromUri(uri);
-                this.processResponse(results);
+                await this.processResponse(results);
+                await Navigation.push(this.props.componentId, {
+                    bottomTabs: {
+                        children: [{
+                            stack: {
+                                children: [
+                                    {
+                                        component: {
+                                            name: 'itemListPage',
+                                            passProps: {
+                                                results: "TEST",
+                                            }
+                                        }
+                                    }],
+                                options: {
+                                    bottomTab: {
+                                        text: 'List',
+                                        icon: listIcon,
+                                        color: colors.primaryDark
+                                    }
+                                }
+                            }
+                        }, {
+                            stack:{
+                                children: [{
+                                    component: {
+                                        name: 'cookPage',
+                                    }
+                                }],
+                                options: {
+                                    bottomTab: {
+                                        text: 'Cook',
+                                        icon: cookIcon,
+                                        color: colors.primaryDark
+                                    }
+                                }
+                            }
+                        }, {
+                            component: {
+                                name: 'settingsPage',
+                                options: {
+                                    bottomTab: {
+                                        text: 'Settings',
+                                        icon: settingsIcon,
+                                        color: colors.primaryDark
+                                    }
+                                }
+                            }
+                        }]
+                    }
+                })
             } catch (e) {
                 Alert.alert("Receipt scanning failed", "Please move your camera closer to the receipt.")
             }
@@ -77,13 +128,9 @@ export default class ScannerView extends Component {
         for (var i = 0; i < results.length; i++) {
             receiptLines = receiptLines.concat(results[i].text.split("\n"));
         }
-        for (var j = 0; j < receiptLines.length; j++) {
-            receiptLines[j] += " 2.53";
-        }
-        console.log(receiptLines);
         try {
             let response = await fetch(
-                `http://api.funnelfoods.com/api/receiptparse/items/parse?input=${JSON.stringify(receiptLines)}`, {
+                `http://api.funnelfoods.com/api/receipt/parse?input=${JSON.stringify(receiptLines)}`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json'
@@ -91,7 +138,7 @@ export default class ScannerView extends Component {
                 }
             );
             const result = await response.json();
-            console.log(result);
+            this.state.result = result;
         } catch (error) {
             Alert.alert("Failed to connect", "Make sure that your internet connection is working and try again!");
         }
