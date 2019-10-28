@@ -17,10 +17,10 @@ export default class CookPage extends Component {
 
     componentDidMount() {
         // TODO: Change this
-        fetch('http://api.funnelfoods.com/api/recipes/1')
+        fetch('http://api.funnelfoods.com/api/receipt/recommend?input=[%27apple%27,%27orange%27]')
             .then((response) => response.json())
-            .then((data) => {
-                this.setState({recipes: [data.data, data.data]});
+            .then((responseJson) => {
+                this.setState({recipes: responseJson.data});
             });
     }
 
@@ -35,7 +35,7 @@ export default class CookPage extends Component {
                     </View>
                     <View style={ styles.searchContainer }>
                         <TouchableOpacity onPress={() => Alert.alert('Pushed Search Icion')}>
-                            <Icon name ='ios-search' size={35} color={ colors.white } style = { styles.icon } />
+                            <Icon name ='ios-search' size={30} color={ colors.white } style = { styles.icon } />
                         </TouchableOpacity>
                     </View>
                 </View>

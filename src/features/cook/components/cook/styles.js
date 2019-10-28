@@ -10,7 +10,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#E61259',
         paddingHorizontal: 32,
         flexDirection: "row",
-        paddingBottom: 10
+        paddingBottom: 10,
+        paddingTop: 10
     },
     titleContainer: {
         marginTop: 50,
